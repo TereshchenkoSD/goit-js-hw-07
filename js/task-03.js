@@ -16,7 +16,7 @@ const images = [
   },
 ];
 
-const imagesRef = document.querySelector('#gallery');
+const galleryRef = document.querySelector('#gallery');
 
 const imagesListTemplate = ({ url, alt }) => {
   return `<li class="item"><img class="image" src=${url} alt=${alt}></li>;`;
@@ -26,4 +26,4 @@ const markup = images.map(imagesListTemplate).join('');
 
 console.log(markup);
 
-imagesRef.insertAdjacentHTML('afterbegin', markup);
+galleryRef.insertAdjacentHTML('afterbegin', markup);
